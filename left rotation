@@ -1,0 +1,35 @@
+//left rotation
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    int array_size,number_of_rotation,array_first_value,array_value;
+    vector<int> number_list;
+    scanf("%d",&array_size);
+    scanf("%d",&number_of_rotation);
+    //get array values
+    for(int i=0;i<array_size;i++){
+       scanf("%d",&array_value);
+       number_list.push_back(array_value);
+    }
+    
+    while(number_of_rotation>0){
+        array_first_value = number_list[0];
+        for(int i=0;i<number_list.size();i++){
+            if(i==number_list.size()-1){
+                number_list[i] = array_first_value;
+            }else{
+                number_list[i] = number_list[i+1];
+            }
+        }
+        number_of_rotation--;
+    }
+    
+    for(int i=0;i<number_list.size();i++){
+        printf("%d ",number_list[i]);
+    }
+
+    return 0;
+}
