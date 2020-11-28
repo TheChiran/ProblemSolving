@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int total_test,
+        attendance;
+    scanf("%d",&total_test);
+    while(total_test>0){
+        scanf("%d",&attendance);
+        cout<<(attendance * (attendance-1)) / 2<<endl; //gauss formula
+        total_test--;
+    }
+
+    return 0;
+}
