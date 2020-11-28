@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int total_test,
+        pair;
+    scanf("%d",&total_test);
+    while(total_test>0){
+        scanf("%d",&pair);
+        if(pair==1){
+            cout<<(pair*2)<<endl;
+        }else{
+            cout<<(pair+1)<<endl;
+        }
+        total_test--;
+    }
+
+    return 0;
+}
