@@ -4,6 +4,10 @@ height of triangle formular, height = 2*(area/b)
 #include <cmath>
 using namespace std;
 
+int calculateHeight(int area,float base){
+    return ceil(2*(area/base));
+}
+
 int main()
 {
     int area;
@@ -11,9 +15,7 @@ int main()
     long long int height;
     scanf("%f",&base);
     scanf("%d",&area);
-    height = ceil(2*(area/base));
+    height = calculateHeight(area,base);
     cout<<height<<endl;
-    
-
     return 0;
 }
